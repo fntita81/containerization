@@ -1,31 +1,30 @@
-docker images
-#MS moved from docker hub https://github.com/microsoft/containerregistry/blob/main/docs/dockerhub-to-mcr-repo-mapping.md
-#mcr does NOT have a latest tag. Must specify a version
-docker pull mcr.microsoft.com/windows/servercore:ltsc2022  #previously microsoft/windowsservercore
-docker pull mcr.microsoft.com/windows/nanoserver:ltsc2022
-docker search sql
-docker pull mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2022 #previously microsoft/iis
-docker image history mcr.microsoft.com/windows/servercore/iis
+#Create docker image 
+docker build -t my-sample-ui .
 
-#Quick image
-Set-Location badfather
-docker build -t badfather .
+#check the image created by listing the docker images
+docker images -a
 
-#Windows examples
-docker run --name iisdemo -it -p 80:80 badfather cmd
-#add --isolation=hyperv    to make a Hyper-V container instead
+#create a docker container
+docker run -p 3000:80 my-sample-ui
 
-docker rmi badfather
-#endregion
+#list the containers
+docker ps -a
 
-#region Linux Containers
-#Apache image
-docker images
-docker search --filter is-official=true httpd
-docker pull httpd
-docker image history httpd #view the layers
-docker image inspect httpd #detailed info about image
-docker run --name httpdrun -dit httpd bash
+#stop the running container
+docker stop CONTAINER_ID
+
+#remove the running container
+docker rm CONTAINER_ID
+
+###############################################################################################################################################
+# Difference between docker stop and rm is explained below
+# docker stop and docker rm are two different commands in the Docker platform that are used for different purposes.
+# docker stop is used to stop a running container. When you execute the docker stop command followed by a container ID or container name, Docker sends a SIGTERM signal to the main process running inside the container, requesting it to stop gracefully. If the process does not respond to the signal within the default timeout period (10 seconds), Docker sends a SIGKILL signal, which forcefully terminates the process.
+# On the other hand, docker rm is used to remove a stopped container. When you execute the docker rm command followed by a container ID or container name, Docker removes the container from the system.
+###############################################################################################################################################
+
+
+
 
 #list containers
 docker ps -a
@@ -35,47 +34,14 @@ docker start $dockid
 docker stop $dockid
 docker rm $dockid
 
-Set-Location badfatherapache
-docker build -t badfather .
-docker history badfather
-docker images
-
-docker run -dit --name badfather-app -p 80:80 badfather
-$dockid = $(docker ps -a -q --filter "name=badfather-app")
-docker rmi badfather
-
-#Networking
-docker network ls
-docker network inspect bridge
-
-#endregion
-
-#region Azure and Docker Hub Interactions
-#Need to be logged into Azure first
-#https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli#log-in-to-a-registry
-az acr login --name savilltech
-
-docker tag badfather savilltech.azurecr.io/images/badfather
-docker push savilltech.azurecr.io/images/badfather
-docker pull savilltech.azurecr.io/images/badfather
-docker image history savilltech.azurecr.io/images/badfather
-
-#Cleanup
-docker rmi savilltech.azurecr.io/images/badfather
-docker rmi badfather
-docker rmi httpd
-
-#talk to running ACI instance
-az container list --output table
-az container exec -g RG-ACI --name bad1 --container-name bad1 --exec-command "/bin/bash"
-
+docker rmi image-name
 
 #Docker Hub demo
-docker login  #johnthebrit
+docker login
 docker images
-docker tag a93a249d820c johnthebrit/badfather:latest
-docker push johnthebrit/badfather
-docker pull johnthebrit/badfather
+docker tag a93a249d820c handsondevops/my-sample-ui:latest
+docker push handsondevops/my-sample-ui
+docker pull handsondevops/my-sample-ui
 #endregion
 
 #region Bulk Cleanup
@@ -85,3 +51,12 @@ docker rm $(docker ps -a -q)
 #Remove all container images
 docker rmi $(docker images -q)
 #endregion
+
+
+#advanced
+docker images
+docker search --filter is-official=true httpd
+docker pull httpd
+docker image history httpd #view the layers
+docker image inspect httpd #detailed info about image
+docker run --name httpdrun -dit httpd bash
