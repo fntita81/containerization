@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: azure-my-sample-ui-web
-        image: handsondevops.azurecr.io/images/mysampleui
+        image: handsondevops/my-sample-ui:1.0.1
         resources:
           requests:
             cpu: 100m
