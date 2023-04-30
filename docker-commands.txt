@@ -1,3 +1,24 @@
+# After logging into the machine & doing sudo su to become super user, make your own directory
+mkdir YOUR_OWN_DIRECTORY
+
+# Move inside your directory
+cd YOUR_OWN_DIRECTORY
+
+# check if your are in your directory or not. You can use pwd command to check your current directory
+# make sure you are in the directory for example /home/ubuntu/YOUR_OWN_DIRECTORY
+pwd
+
+#clone the containerization repository
+git clone https://github.com/HandsOnDevOpsTraining/docker-sample-ui-app.git
+
+
+# change to the docker-sample-ui-app folder where Dockerfile exists
+cd docker-sample-ui-app
+
+# check if your are in the directory where the Dockerfile exists. You can use pwd command to check your current directory
+# make sure you are in the directory for example /home/ubuntu/YOUR_OWN_DIRECTORY/docker-sample-ui-app
+pwd
+
 #Create docker image 
 docker build -t my-sample-ui .
 
@@ -23,17 +44,7 @@ docker rm CONTAINER_ID
 # On the other hand, docker rm is used to remove a stopped container. When you execute the docker rm command followed by a container ID or container name, Docker removes the container from the system.
 ###############################################################################################################################################
 
-
-
-
-#list containers
-docker ps -a
-$dockid = $(docker ps -a -q --filter "name=httpdrun")
-docker attach $dockid  #Ctrl P Q to exit and leave running. Or exit to stop
-docker start $dockid
-docker stop $dockid
-docker rm $dockid
-
+# Docker command to remove the image
 docker rmi image-name
 
 #Docker Hub demo
