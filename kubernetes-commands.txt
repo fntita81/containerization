@@ -1,8 +1,7 @@
-az aks get-credentials --resource-group RG-AKS --name AKSCNI
+az aks get-credentials --resource-group Kubernetes_group --name kubernetes
 
 #View service principal for cluster
-az aks show --resource-group RG-AKS --name AKSCNI --query servicePrincipalProfile.clientId
-az ad sp show --id (az aks show --resource-group RG-AKS --name AKSCNI --query servicePrincipalProfile.clientId)
+az aks get-credentials --resource-group Kubernetes_group --name kubernetes --query servicePrincipalProfile.clientId
 
 #Install kubectl then have to update path to include it
 az aks install-cli
@@ -10,6 +9,26 @@ az aks install-cli
 #Get basic info
 kubectl cluster-info
 kubectl get nodes
+
+# After logging into the machine & doing sudo su to become super user, make your own directory
+mkdir YOUR_OWN_DIRECTORY
+
+# Move inside your directory
+cd YOUR_OWN_DIRECTORY
+
+# check if your are in your directory or not. You can use pwd command to check your current directory
+# make sure you are in the directory for example /home/ubuntu/YOUR_OWN_DIRECTORY
+pwd
+
+#clone the containerization repository
+git clone https://github.com/HandsOnDevOpsTraining/containerization.git
+
+
+# change to the containerization folder
+cd containerization
+
+# change to the directory or folder where the my-sample-ui-deployment.yml exists
+cd kubernetes
 
 #Apply deployment
 kubectl apply -f my-sample-ui-deployment.yaml
