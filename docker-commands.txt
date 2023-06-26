@@ -71,3 +71,9 @@ docker pull httpd
 docker image history httpd #view the layers
 docker image inspect httpd #detailed info about image
 docker run --name httpdrun -dit httpd bash
+
+# Ubuntu image example
+docker pull ubuntu
+# it option in below command is for enabling interactive mode
+docker run -it ubuntu
+cat /etc/os-release

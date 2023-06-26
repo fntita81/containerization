@@ -1,3 +1,6 @@
+# Login to the azure cloud portal account
+az login
+
 az aks get-credentials --resource-group Kubernetes_group --name kubernetes
 
 #View service principal for cluster
@@ -47,3 +50,6 @@ kubectl get endpoints azure-my-sample-ui-web
 kubectl get service --all-namespaces
 #delete deployment
 kubectl delete  -f my-sample-ui-deployment.yaml
+
+# If the container registry is azure cloud registry, then login to it using below command
+az acr login -n 
