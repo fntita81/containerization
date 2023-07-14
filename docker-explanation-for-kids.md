@@ -1,4 +1,4 @@
-![image](https://github.com/HandsOnDevOpsTraining/containerization/assets/129347802/11938b26-bd05-4c2b-b3e4-cdb3bbaa477b)![image](https://github.com/HandsOnDevOpsTraining/containerization/assets/129347802/02fee498-7645-4776-8618-1bd5c907de86)# How to explain Docker to a New DevOps Engineer
+# How to explain Docker to a New DevOps Engineer
 
 ### 🚀💫🎈 Hey there, tech enthusiasts!
 
