@@ -1,4 +1,4 @@
-# How to explain Docker to a New DevOps Engineer
+![image](https://github.com/HandsOnDevOpsTraining/containerization/assets/129347802/11938b26-bd05-4c2b-b3e4-cdb3bbaa477b)![image](https://github.com/HandsOnDevOpsTraining/containerization/assets/129347802/02fee498-7645-4776-8618-1bd5c907de86)# How to explain Docker to a New DevOps Engineer
 
 ### 🚀💫🎈 Hey there, tech enthusiasts!
 
@@ -29,7 +29,7 @@ When you’re ready to build your spaceship 🚀 using this Dockerfile, you just
 
 **Now, where do you store this incredible spaceship? 🤔**
 
-Welcome to the **Docker Registry!** It's like a massive cosmic warehouse 🏭🌠 where all these ready-to-go spaceships (docker images) are stored.
+Welcome to the **Docker Registry!** It's like a massive cosmic warehouse 🏭🌠 where all these ready-to-go spaceships (**docker images**) are stored.
 
 You can **'push'** your spaceship 🚀 into this warehouse or **'pull'** 🚚 other ready-made spaceships from it.
 
