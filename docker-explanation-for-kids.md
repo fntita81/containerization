@@ -1,4 +1,4 @@
-# How to explain Docker to a kid
+# How to explain Docker to a New DevOps Engineer
 
 ### 🚀💫🎈 Hey there, tech enthusiasts!
 
