@@ -28,6 +28,10 @@ docker images -a
 #create a docker container
 docker run -p 3000:80 my-sample-ui
 
+#create a docker container with name
+docker run -p 3000:80 --name react-js-ui my-sample-ui
+
+
 #list the containers
 docker ps -a
 

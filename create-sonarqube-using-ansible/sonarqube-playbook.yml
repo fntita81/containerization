@@ -1,0 +1,43 @@
+---
+- name: Install Docker on AWS EC2
+  hosts: your_ec2_instance
+  remote_user: ubuntu
+  become: yes
+
+  tasks:
+    - name: Install required packages for Docker
+      yum:
+        name:
+          - docker
+          - python3-pip
+        state: present
+
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Install Docker Python module
+      pip:
+        name: docker
+        state: present
+
+- name: Run SonarQube container
+  hosts: your_ec2_instance
+  remote_user: ec2-user
+
+  tasks:
+    - name: Pull SonarQube Docker image
+      docker_image:
+        name: sonarqube:latest
+        source: pull
+
+    - name: Run SonarQube container
+      docker_container:
+        name: sonarqube
+        image: sonarqube:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "9000:9000"
