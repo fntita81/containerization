@@ -1,0 +1,24 @@
+# spin off Ec2 Instance with Amazon Linux AMI
+
+sudo yum update -y
+
+# install docker
+
+sudo yum install -y docker
+sudo service docker start
+sudo systemctl enable docker
+sudo usermod -aG docker ec2-user 
+
+# install sonarqube
+
+sudo docker pull sonarqube
+sudo docker volume create sonarqube_data
+sudo docker run -d -p 9000:9000 -v sonarqube_data:/opt/sonarqube/data --name sonarqube sonarqube
+
+# copy public ip of Ec2 instance, paste in a browser and add :9000 behind install
+
+# use default login credential
+    # user name: admin
+    # password: admin
+    # afterward configure your username and password
+
