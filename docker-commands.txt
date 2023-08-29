@@ -20,7 +20,7 @@ cd docker-sample-ui-app
 pwd
 
 #Create docker image 
-docker build -t my-sample-ui .
+docker build -t my-sample-ui:v1 .
 
 #check the image created by listing the docker images
 docker images -a
