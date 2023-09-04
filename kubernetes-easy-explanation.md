@@ -46,7 +46,3 @@ Let's break it down using a familiar scenario: a restaurant!
 - Persistent storage is your fridge and pantry, where important data is stored, persisting even if a container is replaced.
 
 So, Kubernetes orchestrates your application just like a restaurant serves meals - efficiently and seamlessly.
-
-If you want the learn the architecture in details ,Please watch the latest video on my youtube Channel.
-
-𝙄𝙛 𝙮𝙤𝙪 𝙬𝙖𝙣𝙩 𝙩𝙤 𝙡𝙚𝙖𝙧𝙣 𝙖𝙣𝙙 𝙜𝙧𝙤𝙬 𝙞𝙣 𝙏𝙚𝙘𝙝 𝙙𝙤𝙣'𝙩 𝙛𝙤𝙧𝙜𝙚𝙩 𝙩𝙤 𝙨𝙪𝙗𝙨𝙘𝙧𝙞𝙗𝙚 𝙩𝙤 𝙢𝙮 𝙘𝙝𝙖𝙣𝙣𝙚𝙡 𝙬𝙝𝙚𝙧𝙚 𝙞 𝙥𝙡𝙖𝙣 𝙩𝙤 𝙨𝙝𝙖𝙧𝙚 𝙖 𝙜𝙧𝙚𝙖𝙩 𝙩𝙚𝙘𝙝𝙣𝙞𝙘𝙖𝙡 𝙘𝙤𝙣𝙩𝙚𝙣𝙩.
