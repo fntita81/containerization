@@ -43,3 +43,23 @@ kubectl get pods -w
 
 #### get pods output in wide format
 kubectl get pods -o wide
+
+
+### Service commands
+kubectl get service
+
+#### Apply Service
+kubectl apply -f <service.yml>
+
+#### Get Service
+kubectl get svc
+kubectl get service
+
+#### Describe svc
+kubectl descrive svc <name-of-service>
+kubectl get pods -o wide
+
+
+#### Get Nodes
+kubectl descrive svc <name-of-service>
+kubectl get node -o wide
