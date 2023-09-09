@@ -16,6 +16,9 @@ kubectl describe pod <pod-name>
 #### Delete pod
 kubectl delete pod <pod-name>
 
+#### Delete all
+kubectl delete -f .
+
 
 ### ReplicaSets
 
@@ -37,3 +40,6 @@ kubectl edit deployment <deploymnent-name>
 
 #### Wait will wait and show the current pods in live
 kubectl get pods -w
+
+#### get pods output in wide format
+kubectl get pods -o wide
