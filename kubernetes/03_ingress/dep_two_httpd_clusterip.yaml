@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deployment
+spec:
+  replicas: 3  # You can adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+        - name: httpd
+          image: httpd:latest  # You can specify a different image version if needed
+          ports:
+            - containerPort: 80  # Port on which httpd listens
+          env:
+          - name: TITLE
+            value: "NGINX APP1"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd-service
+spec:
+  selector:
+    app: httpd
+  ports:
+    - protocol: TCP
+      port: 80  # Port on which the Service listens
+      targetPort: 80  # Port to which traffic is forwarded within the pods
+  type: ClusterIP  # Exposes the Service internally within the cluster
