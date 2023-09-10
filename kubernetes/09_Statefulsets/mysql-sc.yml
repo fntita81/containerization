@@ -1,8 +1,8 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: gcp-storage-class
-provisioner: kubernetes.io/gce-pd
+  name: azure-standard-storage
+provisioner: kubernetes.io/azure-disk
 parameters:
-  type: pd-standard
+  skuName: Standard_LRS
 reclaimPolicy: Delete
