@@ -1,3 +1,17 @@
+# Start from this step only if you are using the server created for the lab 
+## SSH to the remote AWS EC2 instance using the AWS EC2 Key Pair
+- aws-ssh-login-keypair.pem file attached in Google Drive for your usage
+- https://drive.google.com/drive/folders/1_2sYQt6b9jHsQYeeZCPoVvAfvIISjY5l
+- Download the aws-ssh-login-keypair.pem file to the location that is convenient for you 
+- Then use cd command to navigate to the location where your aws-ssh-login-keypair.pem file is located
+- If you are not sure where is your current location, you can use “pwd” command to find the present working directory
+- Once you are in the folder where the aws-ssh-login-keypair.pem file is located, then execute below command to login to the remote AWS EC2 instance 
+- “ssh -i aws-ssh-login-keypair.pem ubuntu@52.15.182.125”
+
+
+
+# If you are using your own docker installation in local machine, you can start from here
+
 # After logging into the machine & doing sudo su to become super user, make your own directory
 mkdir YOUR_OWN_DIRECTORY
 
