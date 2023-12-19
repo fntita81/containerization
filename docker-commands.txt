@@ -1,12 +1,12 @@
 # Start from this step only if you are using the server created for the lab 
-## SSH to the remote AWS EC2 instance using the AWS EC2 Key Pair
-- aws-ssh-login-keypair.pem file attached in Google Drive for your usage
-- https://drive.google.com/drive/folders/1_2sYQt6b9jHsQYeeZCPoVvAfvIISjY5l
-- Download the aws-ssh-login-keypair.pem file to the location that is convenient for you 
-- Then use cd command to navigate to the location where your aws-ssh-login-keypair.pem file is located
-- If you are not sure where is your current location, you can use “pwd” command to find the present working directory
-- Once you are in the folder where the aws-ssh-login-keypair.pem file is located, then execute below command to login to the remote AWS EC2 instance 
-- “ssh -i aws-ssh-login-keypair.pem ubuntu@52.15.182.125”
+## Login to the AWS account using the link sent via welcome email
+- aws cloud link is here : https://handsondevops.signin.aws.amazon.com/console
+- username is your email and password is Training@123
+- Click on EC2 & make sure you are in Ohio region (The region will be on the top right corner)
+- Select the Jenkins & SonarQube server instance & connect to the EC2 machine
+- Once you are connected, then type below command to become super user
+  sudo -i
+- Follow the next steps below
 
 
 
@@ -40,7 +40,7 @@ docker build -t my-sample-ui:v1 .
 docker images -a
 
 #create a docker container
-docker run -p 3000:80 my-sample-ui
+docker run -p 3000:80 my-sample-ui:v1
 
 #create a docker container with name
 docker run -p 3000:80 --name react-js-ui my-sample-ui
