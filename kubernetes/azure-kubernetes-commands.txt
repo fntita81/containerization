@@ -30,11 +30,14 @@ git clone https://github.com/HandsOnDevOpsTraining/containerization.git
 # change to the containerization folder
 cd containerization
 
-# change to the directory or folder where the my-sample-ui-deployment.yml exists
+# change to the kubernetes directory
 cd kubernetes
 
+# change to the directory or folder where the my-sample-ui-deployment-LoadBalancer.yaml  exists
+cd 02_services
+
 #Apply deployment
-kubectl apply -f my-sample-ui-deployment.yaml
+kubectl apply -f my-sample-ui-deployment-LoadBalancer.yaml 
 
 #View information
 kubectl get pods -o wide
