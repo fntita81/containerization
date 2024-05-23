@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: my-deployment-loadbalancer
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: my-ui-loadbalancer
