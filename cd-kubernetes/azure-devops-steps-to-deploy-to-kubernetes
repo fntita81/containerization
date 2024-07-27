@@ -4,3 +4,6 @@
    - First create service connection for Kubernetes
    - Then create the cd pipeline and select the service connection
    - Use apply and select the drop/deploy.yml for the apply
+
+
+<!-- https://www.youtube.com/watch?v=UEyWTeL7PX8&t=741s&ab_channel=DevOpsShack -->
