@@ -16,3 +16,5 @@ CI pipeline to copy the deploy.yml to the artifact folder using the below pipeli
    - First create service connection for Kubernetes
    - Then create the cd pipeline and select the service connection
    - Use apply and select the drop/deploy.yml for the apply
+
+![image](https://github.com/user-attachments/assets/d4425387-adc9-44e7-80da-090ed06bbdff)
