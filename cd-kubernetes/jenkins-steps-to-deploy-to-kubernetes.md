@@ -1,4 +1,5 @@
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ee553bb0-e1c2-46e5-a30b-51521c4b4268)
+
 
 1. First create a Kubernetes plugin
 2. Connect to the kubernetes cluster
