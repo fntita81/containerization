@@ -5,5 +5,7 @@
    - Then create the cd pipeline and select the service connection
    - Use apply and select the drop/deploy.yml for the apply
 
+![image](https://github.com/user-attachments/assets/58a733d0-e887-4ab8-a694-031669fc2fc2)
+
 
 <!-- https://www.youtube.com/watch?v=UEyWTeL7PX8&t=741s&ab_channel=DevOpsShack -->
