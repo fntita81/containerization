@@ -1,3 +1,5 @@
+![Uploading image.png…]()
+
 1. First create a Kubernetes plugin
 2. Connect to the kubernetes cluster
    - kubectl create namespace jenkins
