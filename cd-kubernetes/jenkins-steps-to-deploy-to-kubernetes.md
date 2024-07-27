@@ -18,3 +18,5 @@ CI pipeline to copy the deploy.yml to the artifact folder using the below pipeli
    - Use apply and select the drop/deploy.yml for the apply
 
 ![image](https://github.com/user-attachments/assets/d4425387-adc9-44e7-80da-090ed06bbdff)
+
+<!-- [This is commented out.](https://www.youtube.com/watch?v=qcmUy_iFT-A&ab_channel=LearnDevOpsandCloud) -->
