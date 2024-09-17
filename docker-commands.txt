@@ -3,9 +3,10 @@
 - aws cloud link is here : https://handsondevops.signin.aws.amazon.com/console
 - username is your email and password is Training@123
 - Click on EC2 & make sure you are in Ohio region (The region will be on the top right corner)
-- Select the Jenkins & SonarQube server instance & connect to the EC2 machine
-- Once you are connected, then type below command to become super user
-  sudo -i
+- Select the Docker, Jenkins & SonarQube server instance & connect to the EC2 machine
+- Once you are connected, then type below command to become super user using either one of the following command
+  sudo -i 
+  or sudo su
 - Follow the next steps below
 
 
