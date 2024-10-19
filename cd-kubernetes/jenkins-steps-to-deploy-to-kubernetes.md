@@ -51,6 +51,6 @@
    }
    ```
 
-![image](https://github.com/user-attachments/assets/d4425387-adc9-44e7-80da-090ed06bbdff)
+
 
 <!-- [This is commented out.](https://www.youtube.com/watch?v=qcmUy_iFT-A&ab_channel=LearnDevOpsandCloud) -->
