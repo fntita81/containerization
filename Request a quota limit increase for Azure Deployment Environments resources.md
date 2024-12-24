@@ -14,7 +14,7 @@ Follow these steps to request a limit increase:
    Press Next after creating the Kubernetes Group and providing Kubernetes name
    ![image](https://github.com/user-attachments/assets/50f80982-b47e-43da-a900-ecbf8868c3e3)
 6. Press on Request a quota increase (Blue link)
-   ![image](https://github.com/user-attachments/assets/2c06284f-23ee-464f-9137-594ada24be79)
+   <img width="882" alt="image" src="https://github.com/user-attachments/assets/f4708fdd-c815-4e22-9e0e-edcf74f6c802" />
 7. Use new limit as 8
    ![image](https://github.com/user-attachments/assets/d9dda1d7-3119-4ca1-a050-06b5c96f8724)
 8. You will see a message saying "We are reviewing your request to adjust 1 quotas"
