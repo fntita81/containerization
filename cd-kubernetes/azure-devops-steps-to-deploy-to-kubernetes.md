@@ -31,6 +31,10 @@ The CI pipeline below does 2 things
 
 <img width="1429" alt="image" src="https://github.com/user-attachments/assets/a8fb4ebe-0c11-4fb2-a9e0-02bc3c3992f0">
 
+Step 4 : 
+Create Service Connection for Kubernetes
+![Uploading image.png…]()
+
 Step 4:
 Create a Release pipeline as below
    - Use apply and select the drop/deploy.yml for the apply
