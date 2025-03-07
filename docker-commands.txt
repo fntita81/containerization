@@ -50,6 +50,16 @@ docker images -a
 #create a docker container
 docker run -p 3000:80 my-sample-ui:v1
 
+#list the containers
+docker ps -a
+
+#stop the running container
+docker stop CONTAINER_ID
+
+#remove the running container
+docker rm CONTAINER_ID
+
+
 #create a docker container with name
 docker run -p 3000:80 --name react-js-ui my-sample-ui
 
