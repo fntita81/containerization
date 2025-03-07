@@ -1,4 +1,10 @@
-# Start from this step only if you are using the server created for the lab 
+# If you are using Windows Machine, the start with this step
+1. Make sure WSL is installed
+2. Install Docker
+3. Follow from Section 2
+
+# Section 1 : 
+## Start from this step only if you are using the server created for the lab 
 ## Login to the AWS account using the link sent via welcome email
 - aws cloud link is here : https://handsondevops.signin.aws.amazon.com/console
 - username is your email and password is Training@123
@@ -23,6 +29,7 @@ cd YOUR_OWN_DIRECTORY
 # make sure you are in the directory for example /home/ubuntu/YOUR_OWN_DIRECTORY
 pwd
 
+# Section 2 : 
 #clone the containerization repository
 git clone https://github.com/HandsOnDevOpsTraining/docker-sample-ui-app.git
 
