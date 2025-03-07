@@ -48,7 +48,7 @@ docker build -t my-sample-ui:v1 .
 docker images -a
 
 #create a docker container
-docker run -p 3000:80 my-sample-ui:v1
+docker run -p 3000:80 my-sample-ui:v1 &
 
 #list the containers
 docker ps -a
@@ -61,7 +61,7 @@ docker rm CONTAINER_ID
 
 
 #create a docker container with name
-docker run -p 3000:80 --name react-js-ui my-sample-ui
+docker run -p 3000:80 --name react-js-ui my-sample-ui &
 
 
 #list the containers
@@ -106,10 +106,10 @@ docker search --filter is-official=true httpd
 docker pull httpd
 docker image history httpd #view the layers
 docker image inspect httpd #detailed info about image
-docker run --name httpdrun -dit httpd bash
+docker run --name httpdrun -dit httpd bash &
 
 # Ubuntu image example
 docker pull ubuntu
 # it option in below command is for enabling interactive mode
-docker run -it ubuntu
+docker run -it ubuntu &
 cat /etc/os-release
