@@ -85,10 +85,11 @@ docker rmi image-name
 
 #Docker Hub demo
 docker login
+  or if we want to login with explicit username, then use docker login -u USER-NAME
 docker images
-docker tag a93a249d820c handsondevops/my-sample-ui:latest
-docker push handsondevops/my-sample-ui
-docker pull handsondevops/my-sample-ui
+docker build -t handsondevops/my-sample-ui:v1
+docker push handsondevops/my-sample-ui:v1
+docker pull handsondevops/my-sample-ui:v1
 #endregion
 
 #region Bulk Cleanup
