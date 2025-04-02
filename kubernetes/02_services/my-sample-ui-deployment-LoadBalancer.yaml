@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-ui-loadbalancer
+      app: my-deployment-loadbalancer
   template:
     metadata:
       labels:
-        app: my-ui-loadbalancer
+        app: my-deployment-loadbalancer
     spec:
       containers:
       - name: kuberegistry
@@ -29,9 +29,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-ui-loadbalancer
+  name: my-deployment-loadbalancer
   labels:
-    app: my-ui-loadbalancer
+    app: my-deployment-loadbalancer
   annotations:
     service.beta.kubernetes.io/azure-load-balancer-tcp-idle-timeout: "4"
 #    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
@@ -41,4 +41,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: my-ui-loadbalancer
+    app: my-deployment-loadbalancer
