@@ -14,7 +14,7 @@ spec:
         app: my-ui-loadbalancer
     spec:
       containers:
-      - name: my-container-lb
+      - name: kuberegistry
         image: handsondevops/my-sample-ui:1.0.1
         resources:
           requests:
